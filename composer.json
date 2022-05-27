@@ -1,0 +1,24 @@
+{
+  "name": "sflightning/bundle",
+  "description": "Symfony bundle that add support for Swoole trough Lightning library",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.3",
+    "sflightning/contracts": "dev-main",
+    "sflightning/lib": "dev-main",
+    "sflightning/runtime": "dev-main",
+    "symfony/config": "5.4.x-dev",
+    "symfony/dependency-injection": "5.4.x-dev",
+    "symfony/http-kernel": "5.4.x-dev"
+  },
+  "conflict": {
+    "ext-swoole": "<4.6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sflightning\\Bundle\\": "src/"
+    }
+  }
+}
