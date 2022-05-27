@@ -2,5 +2,12 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
+        <service id="lightning.listener.swoole.server_start" class="Sflightning\Lib\Listener\Swoole\LightningServerStartListener">
+            <tag name="kernel.event_subscriber"/>
+        </service>
+
+        <service id="Sflightning\Contracts\Event\EventFactoryInterface" class="Sflightning\Lib\Event\EventFactory" public="true">
+
+        </service>
     </services>
 </container>

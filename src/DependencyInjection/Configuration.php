@@ -17,6 +17,6 @@ class Configuration implements ConfigurationInterface
 
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        // TODO: Implement getConfigTreeBuilder() method.
+        return new TreeBuilder('lightning');
     }
 }
