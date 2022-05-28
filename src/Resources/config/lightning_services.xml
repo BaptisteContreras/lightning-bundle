@@ -23,5 +23,9 @@
 
         <service id="Sflightning\Lib\Concurrency\Promise\Decorator\BasicConcurrencyPromiseDecorator" class="Sflightning\Lib\Concurrency\Promise\Decorator\BasicConcurrencyPromiseDecorator" public="false"/>
         <service id="lightning.concurrency.promise.decorator.basic" alias="Sflightning\Lib\Concurrency\Promise\Decorator\BasicConcurrencyPromiseDecorator" public="true"/>
+
+        <instanceof id="Sflightning\Bundle\Concurrency\LightningConcurrency" autowire="true">
+            <tag name="lightning.concurrency_promise_behavior_tag"/>
+        </instanceof>
     </services>
 </container>
