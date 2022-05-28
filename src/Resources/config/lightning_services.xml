@@ -9,5 +9,19 @@
         <service id="Sflightning\Contracts\Event\EventFactoryInterface" class="Sflightning\Lib\Event\EventFactory" public="true">
 
         </service>
+
+        <service id="Sflightning\Lib\Concurrency\Promise\ConcurrencyPromiseManager" class="Sflightning\Lib\Concurrency\Promise\ConcurrencyPromiseManager" public="true">
+            <argument type="service" id="lightning.concurrency.coroutine.handler" />
+            <argument type="service" id="lightning.concurrency.promise.decorator.basic" />
+        </service>
+
+        <service id="lightning.concurrency.promise.manager" alias="Sflightning\Lib\Concurrency\Promise\ConcurrencyPromiseManager" public="true" />
+
+
+        <service id="Sflightning\Lib\Concurrency\Coroutine\CoroutineHandler" class="Sflightning\Lib\Concurrency\Coroutine\CoroutineHandler" public="false" />
+        <service id="lightning.concurrency.coroutine.handler" alias="Sflightning\Lib\Concurrency\Coroutine\CoroutineHandler" public="true" />
+
+        <service id="Sflightning\Lib\Concurrency\Promise\Decorator\BasicConcurrencyPromiseDecorator" class="Sflightning\Lib\Concurrency\Promise\Decorator\BasicConcurrencyPromiseDecorator" public="false"/>
+        <service id="lightning.concurrency.promise.decorator.basic" alias="Sflightning\Lib\Concurrency\Promise\Decorator\BasicConcurrencyPromiseDecorator" public="true"/>
     </services>
 </container>
