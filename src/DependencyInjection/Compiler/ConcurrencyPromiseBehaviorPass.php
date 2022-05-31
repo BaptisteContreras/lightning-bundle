@@ -3,11 +3,13 @@
 namespace Sflightning\Bundle\DependencyInjection\Compiler;
 
 use Sflightning\Bundle\Constante\Tags;
+use Sflightning\Lib\Concurrency\Promise\Promise;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
 
-class ConcurrencyPromiseBehaviorPass implements CompilerPassInterface {
+class ConcurrencyPromiseBehaviorPass implements CompilerPassInterface
+{
     /**         Methods         **/
 
     public function process(ContainerBuilder $container)
