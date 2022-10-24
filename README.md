@@ -68,7 +68,7 @@ and use the trait `Sflightning\Bundle\Concurrency\LightningConcurrency`. Now you
 
 - **executePromise(LightningPromiseInterface $promise): void** : Execute the given promise asynchronously. This method is non-blocking.
 - **executePromises(...$promises): void** : Execute the given promises asynchronously. This method is non-blocking.
-- **waitForPromise(LightningPromiseInterface $promise, int $timeout = Concurrency::PROMISE_WAIT_INFINITELY): void** : Wait for the given promise to finish. This is the only one blocking method in this trait !
+- **waitForPromise(LightningPromiseInterface $promise, int $timeout = Concurrency::PROMISE_WAIT_INFINITELY): void** : Wait for the given promise to finish. This is the only blocking method in this trait !
 
 ```
 class MyAsyncService implements LightningConcurrencyAware
